@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Моя страница {% endblock %}
+
+{% block content %}
+    <h1>Моя страница</h1>
+    <p>
+        Мои посты
+    </p>
+
+    {% for post in post_list %}
+        {{ post.theme }}
+        {{ post.article }}
+        {{ post.author }}
+
+    {% endfor %}
+
+{% endblock %}
